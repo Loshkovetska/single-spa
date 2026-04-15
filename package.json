@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "concurrently \"cd home && pnpm start\" \"cd root-config && pnpm start\" \"cd ui-utils && pnpm start\""
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
