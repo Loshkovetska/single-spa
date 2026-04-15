@@ -3,7 +3,7 @@ type ButtonProps = {
 };
 
 const Button: React.FC<ButtonProps> = ({ children }) => {
-  return <button>{children}</button>;
+  return <button className="primary">{children}</button>;
 };
 
 export { Button };
