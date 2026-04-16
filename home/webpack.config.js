@@ -19,5 +19,8 @@ module.exports = (webpackConfigEnv, argv) => {
       "react-dom/client",
       "@e-commerce/ui-utils",
     ],
+    module: {
+      rules: [{ test: /\.css$/i, use: ["postcss-loader"] }],
+    },
   });
 };

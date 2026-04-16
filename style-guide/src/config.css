@@ -1,0 +1,368 @@
+@theme {
+  /* ── Font Families ── */
+  --font-sans: var(--inter), "Inter", system-ui, sans-serif;
+  --font-rethink-sans: var(--inter), "Inter", system-ui, sans-serif;
+
+  /* ── Colors: Gray Modern ── */
+  --color-gray-modern-0: #ffffff;
+  --color-gray-modern-50: #fcfcfd;
+  --color-gray-modern-100: #f5f7fa;
+  --color-gray-modern-200: #e3e8ef;
+  --color-gray-modern-300: #cdd5df;
+  --color-gray-modern-400: #9aa4b2;
+  --color-gray-modern-500: #697586;
+  --color-gray-modern-600: #4b5565;
+  --color-gray-modern-700: #364152;
+  --color-gray-modern-900: #121926;
+
+  /* ── Colors: Semantic ── */
+  --color-primary-dark: #194185;
+  --color-primary-base: #1570ef;
+  --color-primary-light: #d1e9ff;
+  --color-primary-lighter: #eff8ff;
+
+  --color-error-dark: #93140b;
+  --color-error-base: #f04438;
+  --color-error-light: #fee4e2;
+  --color-error-lighter: #fef3f2;
+
+  --color-warning-dark: #995905;
+  --color-warning-base: #f79009;
+  --color-warning-light: #fef0c7;
+  --color-warning-lighter: #fffaeb;
+
+  --color-success-dark: #065636;
+  --color-success-base: #12b76a;
+  --color-success-light: #d1fadf;
+  --color-success-lighter: #ecfdf3;
+
+  /* ── Colors: Decorative ── */
+  --color-decorative-soft-orange: #ff9780;
+  --color-decorative-yellow: #fed167;
+  --color-decorative-purple: #8699f9;
+  --color-decorative-green: #00cb97;
+  --color-decorative-mid-blue: #80aeff;
+  --color-decorative-rose: #ffeeeb;
+  --color-decorative-amber: #fff9eb;
+
+  /* ── Colors: shadcn/ui (HSL-based) ── */
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  /* ── Border Radius ── */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* ── Box Shadow ── */
+  --shadow-order-item: 0px 0px 0px 5px #f2f5f8;
+  --shadow-top: 0px -2px 8px 0px #9aa4b23d;
+
+  /* ── Drop Shadow ── */
+  --drop-shadow-2: 0px 2px 8px rgba(154, 164, 178, 0.24);
+
+  /* ── Z-Index ── */
+  --z-full: 99999;
+
+  /* ── Background Images ── */
+  --background-image-orange-gradient: linear-gradient(
+    310deg,
+    hsl(32deg 100% 75%) 0%,
+    hsl(29deg 100% 74%) 27%,
+    hsl(26deg 100% 73%) 33%,
+    hsl(24deg 100% 73%) 36%,
+    hsl(21deg 100% 72%) 41%,
+    hsl(19deg 100% 71%) 48%,
+    hsl(16deg 100% 70%) 59%,
+    hsl(14deg 100% 70%) 75%,
+    hsl(11deg 100% 69%) 100%
+  );
+  --background-image-green-gradient: linear-gradient(
+    90deg,
+    hsl(166deg 64% 51%) 0%,
+    hsl(160deg 64% 55%) 17%,
+    hsl(153deg 63% 58%) 40%,
+    hsl(147deg 63% 62%) 60%,
+    hsl(140deg 62% 66%) 74%,
+    hsl(134deg 61% 70%) 83%,
+    hsl(127deg 60% 74%) 90%,
+    hsl(121deg 58% 78%) 95%,
+    hsl(114deg 54% 82%) 100%
+  );
+  --background-image-blue-gradient: linear-gradient(
+    130deg,
+    hsl(216deg 100% 75%) 0%,
+    hsl(220deg 100% 74%) 2%,
+    hsl(223deg 100% 74%) 6%,
+    hsl(227deg 100% 73%) 14%,
+    hsl(231deg 100% 73%) 28%,
+    hsl(234deg 100% 72%) 48%,
+    hsl(238deg 100% 71%) 67%,
+    hsl(242deg 100% 71%) 84%,
+    hsl(246deg 100% 70%) 100%
+  );
+  --background-image-light-blue-gradient: linear-gradient(
+    180deg,
+    #eff8ff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  --background-image-light-blue-gradient-transparent: linear-gradient(
+    180deg,
+    rgba(239, 248, 255, 0) 0%,
+    #eff8ff 100%
+  );
+  --background-image-white-gradient: linear-gradient(
+    270deg,
+    #fff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  --background-image-white-gradient-transparent: linear-gradient(
+    0deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  --background-image-img-gradient: linear-gradient(
+    183deg,
+    rgba(54, 65, 82, 0.1) 2.17%,
+    rgba(255, 255, 255, 0.1) 66.74%
+  );
+  --background-image-mixed-radial-gradient: radial-gradient(
+      93.56% 118.93% at 96.46% 6.44%,
+      rgba(0, 203, 151, 0.12) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    radial-gradient(
+      156.17% 156.17% at 75.83% 163.44%,
+      rgba(128, 174, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    radial-gradient(
+      83.44% 83.44% at 4.2% 94.72%,
+      rgba(134, 153, 249, 0.12) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(0deg, #ffffff, #ffffff);
+  --background-image-product-blue-gradient: linear-gradient(
+    90deg,
+    #8699f9 5%,
+    #86ddf9 92.5%
+  );
+  --background-image-product-orange-gradient: linear-gradient(
+    90deg,
+    #ff9780 0%,
+    #ffd480 97.5%
+  );
+  --background-image-buy-for-me-gradient: linear-gradient(
+    139.68deg,
+    #80b3ff 12.64%,
+    #7567ff 76.48%
+  );
+  --background-image-shopping-gradient: radial-gradient(
+    97.27% 97.27% at 84.55% 91.82%,
+    #0083bd 0%,
+    #00cb97 100%
+  );
+  --background-image-instagram-gradient: radial-gradient(
+      84.69% 79.82% at 26.56% 107.7%,
+      #ffcc00 0%,
+      #ffcc00 12.42%,
+      #fe4a05 56.72%,
+      #ff0f3f 69.42%,
+      rgba(254, 6, 87, 0) 100%
+    ),
+    radial-gradient(
+      37.17% 28.55% at 52.53% 98.59%,
+      #ffcc00 0%,
+      rgba(255, 204, 0, 0) 100%
+    ),
+    radial-gradient(61.5% 44.3% at 96.77% 46.87%, #ff005f 0%, #fc01d8 100%),
+    radial-gradient(
+      60.82% 20.72% at 13.57% 4.07%,
+      #780cff 0%,
+      rgba(130, 11, 255, 0) 100%
+    ),
+    linear-gradient(314.38deg, #1570ef -0.18%, #29bdff 91.47%);
+  --background-image-black-gradient: linear-gradient(
+    72.1deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0) 65.75%
+  );
+  --background-image-spinner-top: linear-gradient(
+    180deg,
+    white,
+    rgba(256, 256, 256, 0.5)
+  );
+  --background-image-spinner-bottom: linear-gradient(
+    180deg,
+    rgba(256, 256, 256, 0.5),
+    white
+  );
+  --background-image-diagonal-line: linear-gradient(
+    to top left,
+    transparent 0%,
+    transparent calc(50% - 0.8px),
+    gray 50%,
+    transparent calc(50% + 0.8px),
+    transparent 100%
+  );
+  --background-image-commercial-gradient: linear-gradient(
+    90deg,
+    #000000 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* ── Flex (override TW v4 built-in flex-N) ── */
+@utility flex-6 {
+  flex: 0 0 calc(100% / 6) !important;
+}
+@utility flex-5 {
+  flex: 0 0 20% !important;
+}
+@utility flex-4 {
+  flex: 0 0 25% !important;
+}
+@utility flex-3 {
+  flex: 0 0 calc(100% / 3) !important;
+}
+@utility flex-2 {
+  flex: 0 0 50% !important;
+}
+@utility flex-full {
+  flex: 0 0 100% !important;
+}
+
+@utility z-full {
+  z-index: 99999;
+}
+
+/* ── Typography: Headings ── */
+@utility text-heading-3xl {
+  font-size: 3.5rem;
+  line-height: 4rem;
+  letter-spacing: -0.035rem;
+  font-weight: 600;
+}
+@utility text-heading-2xl {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  letter-spacing: -0.03rem;
+  font-weight: 600;
+}
+@utility text-heading-xl {
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+  letter-spacing: -0.025rem;
+  font-weight: 600;
+}
+@utility text-heading-lg {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.02rem;
+  font-weight: 600;
+}
+@utility text-heading-base {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: -0.015rem;
+  font-weight: 600;
+}
+@utility text-heading-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.0125rem;
+  font-weight: 600;
+}
+@utility text-heading-x-sm {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.01rem;
+  font-weight: 600;
+}
+@utility text-heading-2x-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: -0.00875rem;
+  font-weight: 600;
+}
+
+/* ── Typography: Subheadings ── */
+@utility text-subheading-base {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: -0.015rem;
+  font-weight: 500;
+}
+@utility text-subheading-sm {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.0125rem;
+  font-weight: 500;
+}
+
+/* ── Typography: Labels ── */
+@utility text-label-lg {
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  letter-spacing: 0rem;
+  font-weight: 500;
+}
+@utility text-label-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 500;
+}
+@utility text-label-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  font-weight: 500;
+}
+@utility text-label-caption {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  font-weight: 500;
+}
+
+/* ── Typography: Paragraphs ── */
+@utility text-paragraph-lg {
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  letter-spacing: 0rem;
+  font-weight: 400;
+}
+@utility text-paragraph-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  font-weight: 400;
+}
+@utility text-paragraph-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+  font-weight: 400;
+}
+@utility text-paragraph-caption {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0rem;
+  font-weight: 400;
+}

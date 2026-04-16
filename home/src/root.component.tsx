@@ -1,9 +1,13 @@
-import { Button } from "@e-commerce/ui-utils";
+import "./global.css";
 
-export default function Root(props) {
+import { Banner, Button } from "@e-commerce/ui-utils";
+
+export default function Root() {
   return (
-    <section>
-      {props.name} is mounted! dhdh <Button>Button</Button>
+    <section className="container">
+      <h1 className="text-subheading-sm">Home</h1>
+      <Button>Press</Button>
+      <Banner />
     </section>
   );
 }

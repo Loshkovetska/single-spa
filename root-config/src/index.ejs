@@ -7,18 +7,15 @@
   <title>Root Config</title>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
   <meta name="importmap-type" use-injector />
-  <!-- If you wish to turn off import-map-overrides for specific environments (prod), uncomment the line below -->
-  <!-- More info at https://github.com/single-spa/import-map-overrides/blob/main/docs/configuration.md#domain-list -->
-  <!-- <meta name="import-map-overrides-domains" content="denylist:prod.example.com" /> -->
 
-  <!-- Shared dependencies go into this import map -->
   <script type="injector-importmap">
     {
       "imports": {
         "@e-commerce/root-config": "//localhost:9000/e-commerce-root-config.js",
         "@e-commerce/home": "//localhost:9001/e-commerce-home.js",
         "@e-commerce/ui-utils": "//localhost:9002/e-commerce-ui-utils.js",
-        "@e-commerce/style-guide": "//localhost:9002/e-commerce-style-guide.js"
+        "@e-commerce/style-guide": "//localhost:9003/e-commerce-style-guide.js"
+
       }
     }
   </script>
@@ -40,6 +37,7 @@
         "@e-commerce/root-config": "//localhost:9000/e-commerce-root-config.js",
         "@e-commerce/home": "//localhost:9001/e-commerce-home.js",
         "@e-commerce/ui-utils": "//localhost:9002/e-commerce-ui-utils.js",
+        "@e-commerce/style-guide": "//localhost:9003/e-commerce-style-guide.js"
       }
     }
   </script>
@@ -56,6 +54,7 @@
   <script>
     window.importMapInjector.initPromise.then(() => {
       import('@e-commerce/root-config');
+      import('@e-commerce/style-guide');
     });
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>

@@ -1,10 +1,10 @@
 const { merge } = require("webpack-merge");
-const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
+const singleSpaDefaults = require("webpack-config-single-spa-ts");
 
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
     orgName: "e-commerce",
-    projectName: "ui-utils",
+    projectName: "style-guide",
     webpackConfigEnv,
     argv,
     outputSystemJS: false,
@@ -12,7 +12,6 @@ module.exports = (webpackConfigEnv, argv) => {
 
   return merge(defaultConfig, {
     // modify the webpack config however you'd like to by adding to this object
-    externals: ["react", "react-dom", "react/jsx-runtime", "react-dom/client"],
     module: {
       rules: [{ test: /\.css$/i, use: ["postcss-loader"] }],
     },

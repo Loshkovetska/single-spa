@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "concurrently \"cd home && pnpm start\" \"cd root-config && pnpm start\" \"cd ui-utils && pnpm start\""
+    "start": "concurrently \"cd home && pnpm start\" \"cd root-config && pnpm start\" \"cd ui-utils && pnpm start\" \"cd style-guide && pnpm start\""
   },
   "dependencies": {
     "concurrently": "^9.2.1"
