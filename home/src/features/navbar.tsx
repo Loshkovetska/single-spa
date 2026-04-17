@@ -1,19 +1,40 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 export default function Navbar() {
+  const { pathname } = useLocation();
+  console.log(pathname);
   return (
-    <div className="min-w-100 max-w-100 bg-primary-base text-white">
-      <ul>
-        <li>
-          <Link to="/">Dashboard</Link>
-        </li>
-        <li>
-          <Link to="/">Charts</Link>
-        </li>
-        <li>
-          <Link to="/">CMS</Link>
-        </li>
-      </ul>
-    </div>
+    <ul className="w-full bg-primary-base p-4 flex flex-col gap-4">
+      <li>
+        <Link
+          to="/"
+          className={`hover:underline ${
+            pathname === "/" ? "text-white" : "text-white/80"
+          }`}
+        >
+          Dashboard
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/analytics"
+          className={`hover:underline ${
+            pathname === "/analytics" ? "text-white" : "text-white/80"
+          }`}
+        >
+          Analytics
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/cms"
+          className={`hover:underline ${
+            pathname === "/cms" ? "text-white" : "text-white/80"
+          }`}
+        >
+          CMS
+        </Link>
+      </li>
+    </ul>
   );
 }

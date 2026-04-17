@@ -6,7 +6,10 @@
     "declarationDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@e-commerce/ui-utils": ["../ui-utils/src/e-commerce-ui-utils.tsx"]
+      "@e-commerce/ui-utils": ["../ui-utils/src/e-commerce-ui-utils.tsx"],
+      "@e-commerce/analytics-chart": [
+        "../analytics-chart/src/e-commerce-analytics-chart.tsx"
+      ]
     }
   },
   "files": ["src/e-commerce-home.tsx"],

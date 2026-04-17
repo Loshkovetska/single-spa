@@ -4,7 +4,7 @@ const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
     orgName: "e-commerce",
-    projectName: "home",
+    projectName: "analytics-chart",
     webpackConfigEnv,
     argv,
     outputSystemJS: false,
@@ -17,7 +17,6 @@ module.exports = (webpackConfigEnv, argv) => {
       "react",
       "react-dom/client",
       "@e-commerce/ui-utils",
-      "@e-commerce/analytics-chart",
     ],
     module: {
       rules: [
