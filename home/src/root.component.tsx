@@ -1,11 +1,17 @@
-import { Banner, Button } from "@e-commerce/ui-utils";
+import "@e-commerce/ui-utils";
+
+import { createBrowserRouter, RouterProvider } from "react-router";
+import { DashboardScreen } from "./screens/dashboard";
+
+const router = createBrowserRouter([
+  {
+    Component: DashboardScreen,
+    loader: () => {
+      return [];
+    },
+  },
+]);
 
 export default function Root() {
-  return (
-    <section className="container">
-      <h1 className="text-subheading-sm">Home</h1>
-      <Button>Press</Button>
-      <Banner />
-    </section>
-  );
+  return <RouterProvider router={router} />;
 }
