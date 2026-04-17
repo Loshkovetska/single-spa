@@ -1,4 +1,4 @@
-@theme {
+:root {
   /* ── Font Families ── */
   --font-sans: var(--inter), "Inter", system-ui, sans-serif;
   --font-rethink-sans: var(--inter), "Inter", system-ui, sans-serif;
@@ -228,73 +228,73 @@
 }
 
 /* ── Flex (override TW v4 built-in flex-N) ── */
-@utility flex-6 {
+.flex-6 {
   flex: 0 0 calc(100% / 6) !important;
 }
-@utility flex-5 {
+.flex-5 {
   flex: 0 0 20% !important;
 }
-@utility flex-4 {
+.flex-4 {
   flex: 0 0 25% !important;
 }
-@utility flex-3 {
+.flex-3 {
   flex: 0 0 calc(100% / 3) !important;
 }
-@utility flex-2 {
+.flex-2 {
   flex: 0 0 50% !important;
 }
-@utility flex-full {
+.flex-full {
   flex: 0 0 100% !important;
 }
 
-@utility z-full {
+.z-full {
   z-index: 99999;
 }
 
 /* ── Typography: Headings ── */
-@utility text-heading-3xl {
+.text-heading-3xl {
   font-size: 3.5rem;
   line-height: 4rem;
   letter-spacing: -0.035rem;
   font-weight: 600;
 }
-@utility text-heading-2xl {
+.text-heading-2xl {
   font-size: 3rem;
   line-height: 3.5rem;
   letter-spacing: -0.03rem;
   font-weight: 600;
 }
-@utility text-heading-xl {
+.text-heading-xl {
   font-size: 2.5rem;
   line-height: 2.75rem;
   letter-spacing: -0.025rem;
   font-weight: 600;
 }
-@utility text-heading-lg {
+.text-heading-lg {
   font-size: 2rem;
   line-height: 2.5rem;
   letter-spacing: -0.02rem;
   font-weight: 600;
 }
-@utility text-heading-base {
+.text-heading-base {
   font-size: 1.5rem;
   line-height: 2rem;
   letter-spacing: -0.015rem;
   font-weight: 600;
 }
-@utility text-heading-sm {
+.text-heading-sm {
   font-size: 1.25rem;
   line-height: 1.75rem;
   letter-spacing: -0.0125rem;
   font-weight: 600;
 }
-@utility text-heading-x-sm {
+.text-heading-x-sm {
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: -0.01rem;
   font-weight: 600;
 }
-@utility text-heading-2x-sm {
+.text-heading-2x-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
   letter-spacing: -0.00875rem;
@@ -302,13 +302,13 @@
 }
 
 /* ── Typography: Subheadings ── */
-@utility text-subheading-base {
+.text-subheading-base {
   font-size: 1.5rem;
   line-height: 2rem;
   letter-spacing: -0.015rem;
   font-weight: 500;
 }
-@utility text-subheading-sm {
+.text-subheading-sm {
   font-size: 1.25rem;
   line-height: 1.75rem;
   letter-spacing: -0.0125rem;
@@ -316,25 +316,25 @@
 }
 
 /* ── Typography: Labels ── */
-@utility text-label-lg {
+.text-label-lg {
   font-size: 1.125rem;
   line-height: 1.625rem;
   letter-spacing: 0rem;
   font-weight: 500;
 }
-@utility text-label-base {
+.text-label-base {
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: 0rem;
   font-weight: 500;
 }
-@utility text-label-sm {
+.text-label-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
   letter-spacing: 0rem;
   font-weight: 500;
 }
-@utility text-label-caption {
+.text-label-caption {
   font-size: 0.75rem;
   line-height: 1rem;
   letter-spacing: 0rem;
@@ -342,25 +342,25 @@
 }
 
 /* ── Typography: Paragraphs ── */
-@utility text-paragraph-lg {
+.text-paragraph-lg {
   font-size: 1.125rem;
   line-height: 1.625rem;
   letter-spacing: 0rem;
   font-weight: 400;
 }
-@utility text-paragraph-base {
+.text-paragraph-base {
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: 0rem;
   font-weight: 400;
 }
-@utility text-paragraph-sm {
+.text-paragraph-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
   letter-spacing: 0rem;
   font-weight: 400;
 }
-@utility text-paragraph-caption {
+.text-paragraph-caption {
   font-size: 0.75rem;
   line-height: 1rem;
   letter-spacing: 0rem;

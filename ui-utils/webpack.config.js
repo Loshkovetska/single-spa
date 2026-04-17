@@ -12,9 +12,13 @@ module.exports = (webpackConfigEnv, argv) => {
 
   return merge(defaultConfig, {
     // modify the webpack config however you'd like to by adding to this object
-    externals: ["react", "react-dom", "react/jsx-runtime", "react-dom/client"],
     module: {
-      rules: [{ test: /\.css$/i, use: ["postcss-loader"] }],
+      rules: [
+        {
+          test: /\.css$/i,
+          use: ["postcss-loader"],
+        },
+      ],
     },
   });
 };

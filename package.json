@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "start": "concurrently \"cd home && pnpm start\" \"cd root-config && pnpm start\" \"cd ui-utils && pnpm start\" \"cd style-guide && pnpm start\""
+    "start": "concurrently \"cd home && pnpm start\" \"cd root-config && pnpm start\" \"cd ui-utils && pnpm start\"",
+    "build": "concurrently \"cd home && pnpm build\" \"cd root-config && pnpm build\" \"cd ui-utils && pnpm build\"",
+    "app-setup": "concurrently \"cd home && pnpm install\" \"cd root-config && pnpm install\" \"cd ui-utils && pnpm install\""
   },
   "dependencies": {
     "concurrently": "^9.2.1"

@@ -1,5 +1,3 @@
-import "./global.css";
-
 import { Banner, Button } from "@e-commerce/ui-utils";
 
 export default function Root() {
