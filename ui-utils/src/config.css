@@ -1,4 +1,4 @@
-:root {
+@theme {
   /* ── Font Families ── */
   --font-sans: var(--inter), "Inter", system-ui, sans-serif;
   --font-rethink-sans: var(--inter), "Inter", system-ui, sans-serif;

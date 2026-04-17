@@ -1,4 +1,4 @@
-/* @import "tailwindcss"; 
+@import "tailwindcss";
 @import "./config.css";
 
 .container {
@@ -75,4 +75,4 @@ input::-webkit-inner-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
-} */
+}

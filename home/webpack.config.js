@@ -12,6 +12,11 @@ module.exports = (webpackConfigEnv, argv) => {
 
   return merge(defaultConfig, {
     // modify the webpack config however you'd like to by adding to this object
-    externals: ["@e-commerce/ui-utils"],
+    externals: [
+      "react/jsx-runtime",
+      "react",
+      "react-dom/client",
+      "@e-commerce/ui-utils",
+    ],
   });
 };
