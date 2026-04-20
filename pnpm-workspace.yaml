@@ -1,0 +1,6 @@
+packages:
+  - "home"
+  - "root-config"
+  - "ui-utils"
+  - "analytics-chart"
+  - "auth"

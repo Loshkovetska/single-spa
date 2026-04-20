@@ -34,7 +34,6 @@ async function loader() {
 }
 export function DashboardScreen() {
   const data = useLoaderData();
-  console.log("data", data);
   return (
     <h1 className="text-2xl">
       Dashboard

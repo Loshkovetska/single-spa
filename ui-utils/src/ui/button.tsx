@@ -6,6 +6,7 @@ const buttonVariants = cva("!text-label-sm cursor-pointer transition-all", {
     variant: {
       default:
         "bg-primary-base text-white active:opacity-80 focus:opacity-80 hover:opacity-80",
+      text: "active:opacity-80 focus:opacity-80 hover:opacity-80",
     },
     size: {
       sm: "rounded px-1 py-0.5",

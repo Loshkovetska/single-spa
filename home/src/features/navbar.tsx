@@ -2,7 +2,6 @@ import { Link, useLocation } from "react-router";
 
 export default function Navbar() {
   const { pathname } = useLocation();
-  console.log(pathname);
   return (
     <ul className="w-full bg-primary-base p-4 flex flex-col gap-4">
       <li>
@@ -19,7 +18,7 @@ export default function Navbar() {
         <Link
           to="/analytics"
           className={`hover:underline ${
-            pathname === "/analytics" ? "text-white" : "text-white/80"
+            pathname.includes("/analytics") ? "text-white" : "text-white/80"
           }`}
         >
           Analytics
@@ -29,7 +28,7 @@ export default function Navbar() {
         <Link
           to="/cms"
           className={`hover:underline ${
-            pathname === "/cms" ? "text-white" : "text-white/80"
+            pathname.includes("/cms") ? "text-white" : "text-white/80"
           }`}
         >
           CMS

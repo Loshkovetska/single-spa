@@ -1,9 +1,7 @@
-import "@e-commerce/ui-utils";
-import "./global.css";
-
 import { createBrowserRouter, RouterProvider } from "react-router";
-import Layout from "./features/layout";
-import { analyticRoute, dashboardRoute } from "./screens";
+import { Layout } from "./features";
+import "./global.css";
+import { SignIn, SignUp } from "./screens";
 
 const router = createBrowserRouter(
   [
@@ -11,11 +9,13 @@ const router = createBrowserRouter(
       Component: Layout,
       children: [
         {
-          index: true,
-          ErrorBoundary: () => <div>Failed To Load</div>,
-          ...dashboardRoute,
+          path: "sign-in",
+          Component: SignIn,
         },
-        analyticRoute,
+        {
+          path: "sign-up",
+          Component: SignUp,
+        },
       ],
     },
   ],
