@@ -3,20 +3,15 @@ import "./global.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Layout from "./features/layout";
+import { authProxy } from "./proxies/auth-proxy";
 import { analyticRoute, dashboardRoute } from "./screens";
 
 const router = createBrowserRouter(
   [
     {
+      middleware: [authProxy],
       Component: Layout,
-      children: [
-        {
-          index: true,
-          ErrorBoundary: () => <div>Failed To Load</div>,
-          ...dashboardRoute,
-        },
-        analyticRoute,
-      ],
+      children: [dashboardRoute, analyticRoute],
     },
   ],
   {},

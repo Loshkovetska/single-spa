@@ -44,7 +44,9 @@
     "webpack-cli": "^4.10.0",
     "webpack-config-single-spa-react-ts": "^8.0.0",
     "webpack-dev-server": "^4.0.0",
-    "webpack-merge": "^5.8.0"
+    "webpack-merge": "^5.8.0",
+    "lucide-react": "*",
+    "radix-ui": "*"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.2.2",

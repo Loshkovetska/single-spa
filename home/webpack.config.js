@@ -15,6 +15,7 @@ module.exports = (webpackConfigEnv, argv) => {
     externals: [
       "react/jsx-runtime",
       "react",
+      "react-dom",
       "react-dom/client",
       "@e-commerce/ui-utils",
       "@e-commerce/analytics-chart",

@@ -1,3 +1,4 @@
+import "@e-commerce/ui-utils";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import { Layout } from "./features";
 import "./global.css";

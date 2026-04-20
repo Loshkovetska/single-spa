@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { BaseRouteObject, useLoaderData } from "react-router";
+import { RouteObject, useLoaderData } from "react-router";
 import Parcel from "single-spa-react/parcel";
 
 async function loader() {
@@ -48,7 +48,9 @@ export function DashboardScreen() {
   );
 }
 
-export const dashboardRoute: BaseRouteObject = {
+export const dashboardRoute: RouteObject = {
+  index: true,
+  ErrorBoundary: () => <div>Failed To Load</div>,
   loader,
   Component: DashboardScreen,
 };

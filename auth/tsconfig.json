@@ -1,8 +1,12 @@
 {
   "extends": "ts-config-single-spa",
   "compilerOptions": {
+    "target": "es2015",
     "jsx": "react-jsx",
-    "declarationDir": "dist"
+    "declarationDir": "dist",
+    "paths": {
+      "@e-commerce/ui-utils": ["../ui-utils/src/e-commerce-ui-utils.tsx"]
+    }
   },
   "files": ["src/e-commerce-auth.tsx"],
   "include": ["src/**/*"],

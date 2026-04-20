@@ -41,10 +41,13 @@ export function AnalyticsScreen() {
   return (
     <div className="border border-gray-modern-200 p-4 rounded-2xl bg-primary-light max-h-100 overflow-auto">
       <DataTable
-        tableHeaders={{
-          headers: ["ID", "Title", "Conversions", "Impressions", ""],
-          thClassName: "p-4 pt-0 text-left",
-        }}
+        tHeaders={[
+          { children: "ID", className: "p-4 pt-0 text-left" },
+          { children: "Title", className: "p-4 pt-0 text-left" },
+          { children: "Conversions", className: "p-4 pt-0 text-left" },
+          { children: "Impressions", className: "p-4 pt-0 text-left" },
+          { children: "", className: "p-4 pt-0 text-left" },
+        ]}
       >
         {data?.map((item) => (
           <TableRow
@@ -84,7 +87,7 @@ export const SingleAnalytic = () => {
     <div className="flex flex-col gap-4">
       <Button
         className="w-fit"
-        variant="text"
+        variant="link"
         onClick={() => navigate(-1)}
       >
         Back
@@ -122,7 +125,7 @@ export const SingleAnalyticDetails = () => {
     <div className="flex flex-col gap-4">
       <Button
         className="w-fit"
-        variant="text"
+        variant="link"
         onClick={() => navigate(-1)}
       >
         Back
