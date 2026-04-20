@@ -61,7 +61,8 @@
     "react-router-dom": "^7.14.1",
     "single-spa": "^5.9.3",
     "single-spa-react": "^6.0.2",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.2.2",
+    "@tanstack/react-query": "^5.99.2"
   },
   "types": "dist/e-commerce-auth.d.ts"
 }

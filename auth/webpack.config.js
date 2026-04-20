@@ -17,6 +17,7 @@ module.exports = (webpackConfigEnv, argv) => {
       "react",
       "react-dom/client",
       "@e-commerce/ui-utils",
+      "@e-commerce/api",
     ],
     module: {
       rules: [

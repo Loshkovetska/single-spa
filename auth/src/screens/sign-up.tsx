@@ -1,3 +1,4 @@
+import { signUp } from "@e-commerce/api";
 import {
   Button,
   Field,
@@ -6,6 +7,7 @@ import {
   Input,
   Separator,
 } from "@e-commerce/ui-utils";
+import { useMutation } from "@tanstack/react-query";
 import { Link, useNavigate } from "react-router";
 import { useForm } from "../lib/hooks/use-form";
 import { signUpSchema } from "../lib/schema";
@@ -28,9 +30,21 @@ export function SignUp() {
     schema: signUpSchema,
   });
 
+  const { mutate, isPending } = useMutation({
+    mutationFn: (values: DefaultValues) => signUp(JSON.stringify(values)),
+    onSuccess: (data) => {
+      localStorage.setItem("user", JSON.stringify(data));
+      navigate("/");
+    },
+    onError: (err) => {
+      if (typeof err === "string") {
+        alert(err);
+      } else alert("Something is wrong");
+    },
+  });
+
   const onSubmit = (values: DefaultValues) => {
-    localStorage.setItem("user", JSON.stringify(values));
-    navigate("/");
+    mutate(values);
   };
   return (
     <form
@@ -78,10 +92,11 @@ export function SignUp() {
       <Button
         type="submit"
         size="lg"
+        loading={isPending}
         disabled={!form.formState.isValid}
         onSubmit={form.handleSubmit(onSubmit)}
       >
-        Sign In
+        Sign Up
       </Button>
       <Separator className="h-px" />
       <p className="text-paragraph-sm text-center">
