@@ -644,7 +644,7 @@ importers:
         specifier: ^3.1.1
         version: 3.3.1(prettier@2.8.8)
       radix-ui:
-        specifier: ^1.4.3
+        specifier: '*'
         version: 1.4.3(@types/react-dom@17.0.26(@types/react@17.0.91))(@types/react@17.0.91)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       ts-config-single-spa:
         specifier: ^3.0.0

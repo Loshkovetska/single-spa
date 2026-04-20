@@ -4,3 +4,4 @@ packages:
   - "ui-utils"
   - "analytics-chart"
   - "auth"
+  - "api"
