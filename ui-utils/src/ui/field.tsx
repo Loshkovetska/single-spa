@@ -190,7 +190,9 @@ function FieldError({
       return null;
     }
 
-    const uniqueErrors = [...new Set(errors.map((error) => error?.message))];
+    const uniqueErrors = Array.from(
+      new Set(errors.map((error) => error?.message)),
+    );
 
     if (uniqueErrors?.length == 1) {
       return uniqueErrors[0];

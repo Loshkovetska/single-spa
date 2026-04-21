@@ -12,7 +12,9 @@ export default function Navbar() {
   const { user } = useLoaderData();
   const navigate = useNavigate();
   const splittedUserName = user.fname?.split(" ");
-  const userName = `${splittedUserName?.[0]?.[0]}${splittedUserName?.[1]?.[0]}`;
+  const userName = `${splittedUserName?.[0]?.[0] ?? ""}${
+    splittedUserName?.[1]?.[0] ?? ""
+  }`;
 
   const logout = () => {
     localStorage.removeItem("user");
