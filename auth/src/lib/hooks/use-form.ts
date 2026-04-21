@@ -26,10 +26,11 @@ export function useForm<T>(params: UseFormParams<T>) {
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const errors = {};
-    const currentSchema = schema.current[e.target.type];
-    if (currentSchema.reg?.test(e.target.value)) {
+    const currentSchema = schema.current[e.target.name];
+    if (!currentSchema.reg?.test(e.target.value)) {
       errors[e.target.name] = currentSchema.errorMessage;
     }
+
     setForm((prev) => {
       const formValues = {
         ...prev.formValues,

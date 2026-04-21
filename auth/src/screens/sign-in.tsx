@@ -9,6 +9,7 @@ import {
   Separator,
 } from "@e-commerce/ui-utils";
 import { useMutation } from "@tanstack/react-query";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { useForm } from "../lib/hooks/use-form";
 import { signInSchema } from "../lib/schema";
@@ -17,6 +18,7 @@ type DefaultValues = { email: string; password: string };
 
 export function SignIn() {
   const navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = useState("");
   const form = useForm<DefaultValues>({
     formValues: { email: "", password: "" },
     schema: signInSchema,
@@ -29,8 +31,8 @@ export function SignIn() {
     },
     onError: (err) => {
       if (typeof err === "string") {
-        alert(err);
-      } else alert("Something is wrong");
+        setErrorMessage(err);
+      } else setErrorMessage("Something is wrong");
     },
   });
 
@@ -45,6 +47,9 @@ export function SignIn() {
       <div className="flex flex-col gap-1">
         <h1 className="text-heading-base text-center">Sign In</h1>
         <p className="text-paragraph-base text-center">Welcome to CRM</p>
+        {!!errorMessage && (
+          <p className="text-shadow-rose-700 text-label-sm">{errorMessage}</p>
+        )}
       </div>
       <div className="flex flex-col gap-4">
         <Field>
@@ -53,12 +58,16 @@ export function SignIn() {
             <Input
               type="email"
               name="email"
+              data-testid="email"
               value={form.formValues["email"]}
               onChange={form.onChange}
             />
           </FieldContent>
           {form.formState.errors?.email && (
-            <FieldError errors={[{ message: form.formState.errors?.email }]} />
+            <FieldError
+              data-testid="email-error"
+              errors={[{ message: form.formState.errors?.email }]}
+            />
           )}
         </Field>
         <Field>
@@ -67,6 +76,7 @@ export function SignIn() {
             <Input
               name="password"
               type="password"
+              data-testid="password"
               value={form.formValues["password"]}
               onChange={form.onChange}
             />
@@ -81,6 +91,7 @@ export function SignIn() {
       <Button
         type="submit"
         size="lg"
+        role="sign-in-submit"
         loading={isPending}
         disabled={!form.formState.isValid}
         onSubmit={form.handleSubmit(onSubmit)}
